@@ -1,11 +1,14 @@
+package stochastic;
+
 /**
  * Created by kuba on 2015-05-02.
  */
 public class Advertisement {
 
     private int limit;
-    private int amount = 0;
+    private int numberOfImpressions = 0;
     private double profit;
+
 
     public Advertisement(int limit, double profit) {
         this.limit = limit;
@@ -20,12 +23,12 @@ public class Advertisement {
         this.limit = limit;
     }
 
-    public int getAmount() {
-        return amount;
+    public int getNumberOfImpressions() {
+        return numberOfImpressions;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void increaseImpressionsCount() {
+        numberOfImpressions++;
     }
 
     public double getProfit() {
@@ -34,5 +37,14 @@ public class Advertisement {
 
     public void setProfit(double profit) {
         this.profit = profit;
+    }
+
+    public int getNumberOfImpressionsLeft() {
+        return limit - numberOfImpressions;
+    }
+
+    public double getValue() {
+
+        return numberOfImpressions / limit;
     }
 }

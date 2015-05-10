@@ -1,3 +1,5 @@
+package stochastic;
+
 import java.util.*;
 
 /**
@@ -9,7 +11,7 @@ public class DataGenerator {
         List<Advertisement> ads = new ArrayList<Advertisement>();
         Random r = new Random();
 
-        for(int i = 0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             ads.add(new Advertisement(r.nextInt(10), r.nextGaussian()));
         }
 
