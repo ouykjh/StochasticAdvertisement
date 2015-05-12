@@ -9,13 +9,18 @@ package stochastic;
  */
 public class Config {
 
-    private static Double punishment;
+    private static Double punishment = 100.00;
+    public static String fileName = "data.txt";
 
     public static Double getPunishment() {
         return punishment;
     }
 
     public static long getNumberOfCachedSolutions() {
-        return 0;  //To change body of created methods use File | Settings | File Templates.
+        return 10;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public static String getFileName() {
+        return fileName;
     }
 }

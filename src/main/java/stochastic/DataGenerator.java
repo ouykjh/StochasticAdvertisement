@@ -1,5 +1,7 @@
 package stochastic;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.*;
 
 /**
@@ -12,9 +14,19 @@ public class DataGenerator {
         Random r = new Random();
 
         for (int i = 0; i < size; i++) {
-            ads.add(new Advertisement(r.nextInt(10), r.nextGaussian()));
+            ads.add(new Advertisement(r.nextInt(30)+1, r.nextDouble()*10));
         }
 
         return ads;
+    }
+
+    public void saveDataToFile(int size) throws FileNotFoundException {
+        PrintWriter out = new PrintWriter("data.txt");
+        Random r = new Random();
+
+        for (int i = 0; i < size; i++) {
+            out.println((r.nextInt(20)+10) + " " + (r.nextDouble()*40));
+        }
+        out.close();
     }
 }
