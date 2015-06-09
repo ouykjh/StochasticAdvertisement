@@ -70,7 +70,27 @@ public class CrossoverTest {
     @Test
     public void generateDataToFile() {
         try {
-            dataGenerator.saveDataToFile(500);
+             dataGenerator.saveDataToFile(1000, 10, 500);
+            dataGenerator.saveDataToFile(2000, 10, 500);
+            dataGenerator.saveDataToFile(5000, 10, 500);
+            dataGenerator.saveDataToFile(10000, 10, 500);
+
+            dataGenerator.saveDataToFile(1000, 200, 300);
+            dataGenerator.saveDataToFile(2000, 200, 300);
+            dataGenerator.saveDataToFile(5000, 200, 300);
+            dataGenerator.saveDataToFile(10000, 200, 300);
+
+
+            dataGenerator.saveDataToFile(1000, 10, 50);
+            dataGenerator.saveDataToFile(2000, 10, 50);
+            dataGenerator.saveDataToFile(5000, 10, 50);
+            dataGenerator.saveDataToFile(10000, 10, 50);
+
+            dataGenerator.saveDataToFile(1000, 400, 500);
+            dataGenerator.saveDataToFile(2000, 400, 500);
+            dataGenerator.saveDataToFile(5000, 400, 500);
+            dataGenerator.saveDataToFile(10000, 400, 500);
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
